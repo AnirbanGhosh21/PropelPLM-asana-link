@@ -1,5 +1,14 @@
 import pandas as pd
 import random
+from getpass import getpass
+
+def asana_login():
+    # Mock Asana login
+    api_key = getpass("Enter your Asana API key: ")
+    if api_key == 'test':
+        print("Logged in to Asana.")
+    else:
+        print("Login failed.")
 
 # Function to generate mock ECO data for Asana board
 def generate_mock_asana_eco_data(num_ecos):
@@ -12,6 +21,7 @@ def generate_mock_asana_eco_data(num_ecos):
     return eco_data
 
 # Generate mock ECO data for Asana board
+asana_login()
 num_ecos = 423
 mock_asana_eco_data = generate_mock_asana_eco_data(num_ecos)
 
